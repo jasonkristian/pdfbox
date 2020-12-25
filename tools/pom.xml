@@ -32,7 +32,7 @@
   <packaging>jar</packaging>
   <name>Apache PDFBox tools</name>
   <description>
-    The Apache PDFBox library is an open source Java tool for working with PDF documents. 
+    The Apache PDFBox library is an open source Java tool for working with PDF documents.
     This artefact contains commandline tools using Apache PDFBox.
   </description>
   <inceptionYear>2002</inceptionYear>
@@ -68,14 +68,14 @@
         <artifactId>jbig2-imageio</artifactId>
         <scope>test</scope>
     </dependency>
-    <!-- For legal reasons (incompatible license), these two dependencies 
-        are to be used only in the tests and may not be distributed. 
+    <!-- For legal reasons (incompatible license), these two dependencies
+        are to be used only in the tests and may not be distributed.
         See also LEGAL-195 -->
     <dependency>
         <groupId>com.github.jai-imageio</groupId>
         <artifactId>jai-imageio-core</artifactId>
         <scope>test</scope>
-    </dependency>    
+    </dependency>
     <dependency>
         <groupId>com.github.jai-imageio</groupId>
         <artifactId>jai-imageio-jpeg2000</artifactId>
@@ -109,6 +109,23 @@
                     </manifestEntries>
                 </archive>
             </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.graalvm.nativeimage</groupId>
+            <artifactId>native-image-maven-plugin</artifactId>
+            <version>20.3.0</version>
+            <configuration>
+                <mainClass>org.apache.pdfbox.tools.PDFBox</mainClass>
+                <imageName>spatial-pdfbox</imageName>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>native-image</goal>
+                    </goals>
+                    <phase>package</phase>
+                </execution>
+            </executions>
         </plugin>
     </plugins>
   </build>
