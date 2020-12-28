@@ -35,11 +35,11 @@
         The Apache PDFBox library is an open source Java tool for working with PDF documents.
     </description>
     <inceptionYear>2002</inceptionYear>
-    
+
     <properties>
     	<git.scmJavadocUrl>git:https://git-wip-us.apache.org/repos/asf/pdfbox-docs//content/docs/${project.version}/javadocs</git.scmJavadocUrl>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.apache.pdfbox</groupId>
@@ -76,13 +76,13 @@
             <scope>test</scope>
         </dependency>
         <!-- For legal reasons (incompatible license), these three dependencies below
-        are to be used only in the tests and may not be distributed. 
+        are to be used only in the tests and may not be distributed.
         See also LEGAL-195 -->
         <dependency>
             <groupId>com.github.jai-imageio</groupId>
             <artifactId>jai-imageio-core</artifactId>
             <scope>test</scope>
-        </dependency>    
+        </dependency>
         <dependency>
             <groupId>com.github.jai-imageio</groupId>
             <artifactId>jai-imageio-jpeg2000</artifactId>
@@ -163,9 +163,9 @@
                     </excludes>
                 </configuration>
             </plugin>
-            <!-- 
+            <!--
             	Publish Javadoc to Apache CMS
-            	After completion log in to https://cms.apache.org/pdfbox/publish 
+            	After completion log in to https://cms.apache.org/pdfbox/publish
             	and click on the Submit button to commit to production.
              -->
             <plugin>

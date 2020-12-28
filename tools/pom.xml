@@ -110,23 +110,27 @@
                 </archive>
             </configuration>
         </plugin>
-        <plugin>
-            <groupId>org.graalvm.nativeimage</groupId>
-            <artifactId>native-image-maven-plugin</artifactId>
-            <version>20.3.0</version>
-            <configuration>
-                <mainClass>org.apache.pdfbox.tools.PDFBox</mainClass>
-                <imageName>spatial-pdfbox</imageName>
-            </configuration>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>native-image</goal>
-                    </goals>
-                    <phase>package</phase>
-                </execution>
-            </executions>
-        </plugin>
+<!--        <plugin>-->
+<!--            <groupId>org.graalvm.nativeimage</groupId>-->
+<!--            <artifactId>native-image-maven-plugin</artifactId>-->
+<!--            <version>20.3.0</version>-->
+<!--            <configuration>-->
+<!--                <mainClass>org.apache.pdfbox.tools.Encrypt</mainClass>-->
+<!--                <imageName>spatial-pdfbox</imageName>-->
+<!--                <buildArgs>-->
+<!--                    &#45;&#45;no-fallback-->
+<!--                </buildArgs>-->
+<!--            </configuration>-->
+<!--            <executions>-->
+<!--                <execution>-->
+<!--                    <goals>-->
+<!--                        <goal>native-image</goal>-->
+<!--                    </goals>-->
+<!--                    <phase>package</phase>-->
+<!--                </execution>-->
+<!--            </executions>-->
+
+<!--        </plugin>-->
     </plugins>
   </build>
 
